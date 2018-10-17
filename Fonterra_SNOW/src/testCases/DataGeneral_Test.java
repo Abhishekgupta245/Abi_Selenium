@@ -12,8 +12,8 @@ import fonterraPageObjects.Data_General;
 
 public class DataGeneral_Test 
 {
-
-	@Test
+	
+	@Test (priority=1,description="Fill the form values and submit the form")
 	public void submitDataGeneralForm() throws InterruptedException
 	{
 	//Setting the location of Internet Explorer driver
@@ -47,20 +47,14 @@ public class DataGeneral_Test
 	//Click on the new RITM link generated in the message pop up window to open the newly created RITM
 		driver.findElement(Data_General.newRITMLink).click();
 		
-	
-	}
-	
-	@Test 
-	public void actionsOnNewRITM()
-	{
-		WebDriver driver = new InternetExplorerDriver();
-		
-		// Add customer comment
+	// Add customer comment
 		driver.findElement(Data_General.addCustComment).sendKeys("Adding customer comment");
 		driver.findElement(Data_General.custCommentSendButton).click();
-				
 		
+	// 
+	
 	}
+	
 	
 	
 }
