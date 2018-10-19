@@ -5,9 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 
-
 public class Data_General 
 {
+	
 	WebDriver driver;
 	
 //Locating the fields in the form	
@@ -18,7 +18,8 @@ public class Data_General
 	public static   By newRITMLink=By.xpath("//a[contains(text(),'Click here to view:')]");
     public static   By addCustComment=By.cssSelector("#post-input");
     public static	By custCommentSendButton=By.cssSelector("#sand > div > span.input-group-btn > input");
-    
+    public static 	By getAnUpdateButton=By.cssSelector("#accordion > div.panel.panel-default.ng-scope > div > button > span");
+    public static	By loggedInUser=By.xpath("//*[@id='sp-nav-bar']/ul[2]/li[1]/a/span[2]");
 	public Data_General(WebDriver driver)
 	{
 	this.driver=driver;
